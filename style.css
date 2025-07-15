@@ -1,0 +1,71 @@
+:root {
+  --no-cursada: #e0e0e0;
+  --cursando: #81d4fa;
+  --aprobada: #a5d6a7;
+  --final-pendiente: #fff59d;
+  --bloqueada: #bdbdbd;
+  --texto: #333;
+  --fondo: #ceb2ed;
+  --borde: #ccc;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.semestre {
+  margin-bottom: 40px;
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.materia {
+  background-color: var(--no-cursada);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 220px;
+  flex: 1 1 220px;
+  position: relative;
+}
+
+.materia[data-estado="Cursando"] { background-color: var(--cursando); }
+.materia[data-estado="Aprobada"] { background-color: var(--aprobada); }
+.materia[data-estado="Final pendiente"] { background-color: var(--final-pendiente); }
+.materia[data-estado="Bloqueada"] {
+  background-color: var(--bloqueada);
+  cursor: not-allowed;
+}
+
+.materia h3 {
+  margin: 0 0 5px;
+}
+
+.detalle {
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.materia input[type="text"] {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  font-size: 0.85em;
+}.
